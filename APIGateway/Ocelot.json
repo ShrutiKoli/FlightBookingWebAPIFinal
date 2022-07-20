@@ -1,0 +1,122 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/AirlineManagement/SearchFlight",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7110
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/SearchFlight",
+      "UpstreamHttpMethod": [ "GET"]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/AirlineManagement/AddAirline",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7110
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/AddAirline",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/AirlineManagement/AddFlight",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7110
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/AddFlight",
+      "UpstreamHttpMethod": [ "POST"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/AirlineManagement/ScheduleFlight",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7110
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/ScheduleFlight",
+      "UpstreamHttpMethod": [ "POST"]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/AirlineManagement/BlockAirline",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7110
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/BlockAirline",
+      "UpstreamHttpMethod": [ "PUT"]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/BookingManagement/GetHistory",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7013
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/GetHistory",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/BookingManagement/GetFlightDetails",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7013
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/GetFlightDetails",
+      "UpstreamHttpMethod": [  "GET"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/BookingManagement/Cancel",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7013
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Cancel",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/BookingManagement/bookflight",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7013
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/bookflight",
+      "UpstreamHttpMethod": [ "POST" ]
+    }
+
+
+  ],
+  "GlobalConfiguration": {
+    "RequestIdKey": "OcRequestId",
+    "AdministrationPath": "./administration"
+  }
+
+}  
