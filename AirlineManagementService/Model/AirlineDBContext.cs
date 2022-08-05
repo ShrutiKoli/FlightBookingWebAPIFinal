@@ -17,6 +17,7 @@ namespace AirlineManagementService.Model
         }
 
         public virtual DbSet<AirlineDetail> AirlineDetails { get; set; } = null!;
+        public virtual DbSet<DiscountMaster> DiscountMasters { get; set; } = null!;
         public virtual DbSet<FlightDetail> FlightDetails { get; set; } = null!;
         public virtual DbSet<FlightScheduleDetail> FlightScheduleDetails { get; set; } = null!;
 
@@ -42,6 +43,19 @@ namespace AirlineManagementService.Model
                 entity.Property(e => e.CreatedOn).HasColumnType("datetime");
 
                 entity.Property(e => e.LastupdatedOn).HasColumnType("datetime");
+            });
+
+            modelBuilder.Entity<DiscountMaster>(entity =>
+            {
+                entity.ToTable("DiscountMaster");
+
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.CreatedOn).HasColumnType("datetime");
+
+                entity.Property(e => e.DiscountCode).HasMaxLength(200);
+
+                entity.Property(e => e.LastUpdatedOn).HasColumnType("datetime");
             });
 
             modelBuilder.Entity<FlightDetail>(entity =>

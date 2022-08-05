@@ -5,9 +5,11 @@ D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\ne
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\AirlineManagementService.runtimeconfig.json
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\AirlineManagementService.dll
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\AirlineManagementService.pdb
+D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\Consul.dll
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\Humanizer.dll
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\MessagePack.dll
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\MessagePack.Annotations.dll
+D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\Microsoft.Build.Locator.dll
@@ -34,6 +36,7 @@ D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\ne
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
@@ -60,6 +63,10 @@ D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\ne
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\NuGet.ProjectModel.dll
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\NuGet.Protocol.dll
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\NuGet.Versioning.dll
+D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\RabbitMQ.Client.dll
+D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\Scrutor.dll
+D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
+D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\VILT\Labs\CaseStudy\FlightBookingSystem\AirlineManagementService\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll

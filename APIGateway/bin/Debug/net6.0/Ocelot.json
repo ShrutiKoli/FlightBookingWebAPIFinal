@@ -1,113 +1,142 @@
 {
   "Routes": [
     {
+      "UseServiceDiscovery": true,
+      "ServiceName": "UserManagementService",
+      "DownstreamPathTemplate": "/api/Auth/register",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/gateway/register",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    },
+    {
+      "UseServiceDiscovery": true,
+      "ServiceName": "UserManagementService",
+      "DownstreamPathTemplate": "/api/Auth/register-admin",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/gateway/registeradmin",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    },
+    {
+      "UseServiceDiscovery": true,
+      "ServiceName": "UserManagementService",
+      "DownstreamPathTemplate": "/api/Auth/login",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/gateway/login",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    },
+    {
+      "UseServiceDiscovery": true,
+      "ServiceName": "UserManagementService",
+      "DownstreamPathTemplate": "/api/Auth/refresh-token",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/gateway/refresh-token",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    },
+    {
+      "UseServiceDiscovery": true,
+      "ServiceName": "AirlineManagementService",
       "DownstreamPathTemplate": "/api/AirlineManagement/SearchFlight",
       "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 7110
-        }
-      ],
       "UpstreamPathTemplate": "/gateway/SearchFlight",
-      "UpstreamHttpMethod": [ "GET"]
+      "UpstreamHttpMethod": [ "GET" ]
+
+    },
+    {
+      "UseServiceDiscovery": true,
+      "ServiceName": "AirlineManagementService",
+      "DownstreamPathTemplate": "/api/AirlineManagement/ProvideDiscount",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/gateway/ProvideDiscount",
+      "UpstreamHttpMethod": [ "POST" ]
+
     },
 
     {
+      "UseServiceDiscovery": true,
+      "ServiceName": "AirlineManagementService",
       "DownstreamPathTemplate": "/api/AirlineManagement/AddAirline",
       "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 7110
-        }
-      ],
       "UpstreamPathTemplate": "/gateway/AddAirline",
       "UpstreamHttpMethod": [ "POST" ]
     },
     {
+      "UseServiceDiscovery": true,
+      "ServiceName": "AirlineManagementService",
       "DownstreamPathTemplate": "/api/AirlineManagement/AddFlight",
       "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 7110
-        }
-      ],
       "UpstreamPathTemplate": "/gateway/AddFlight",
-      "UpstreamHttpMethod": [ "POST"]
+      "UpstreamHttpMethod": [ "POST" ]
     },
     {
+      "UseServiceDiscovery": true,
+      "ServiceName": "AirlineManagementService",
       "DownstreamPathTemplate": "/api/AirlineManagement/ScheduleFlight",
       "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 7110
-        }
-      ],
       "UpstreamPathTemplate": "/gateway/ScheduleFlight",
-      "UpstreamHttpMethod": [ "POST"]
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     {
+      "UseServiceDiscovery": true,
+      "ServiceName": "AirlineManagementService",
       "DownstreamPathTemplate": "/api/AirlineManagement/BlockAirline",
       "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 7110
-        }
-      ],
       "UpstreamPathTemplate": "/gateway/BlockAirline",
-      "UpstreamHttpMethod": [ "PUT"]
+      "UpstreamHttpMethod": [ "PUT" ]
     },
 
     {
+      "UseServiceDiscovery": true,
+      "ServiceName": "BookingManagementService",
       "DownstreamPathTemplate": "/api/BookingManagement/GetHistory",
       "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 7013
-        }
-      ],
       "UpstreamPathTemplate": "/gateway/GetHistory",
+      "UpstreamHttpMethod": [ "GET" ]
+
+    },
+    {
+      "UseServiceDiscovery": true,
+      "ServiceName": "BookingManagementService",
+      "DownstreamPathTemplate": "/api/BookingManagement/ApplyDiscount",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/gateway/ApplyDiscount",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    },
+    {
+      "UseServiceDiscovery": true,
+      "ServiceName": "BookingManagementService",
+      "DownstreamPathTemplate": "/api/BookingManagement/GetDiscount",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/gateway/GetDiscount",
+      "UpstreamHttpMethod": [ "GET" ]
+
+    },
+    {
+      "UseServiceDiscovery": true,
+      "ServiceName": "BookingManagementService",
+      "DownstreamPathTemplate": "/api/BookingManagement/GetFlightDetails",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/gateway/GetFlightDetails",
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
-      "DownstreamPathTemplate": "/api/BookingManagement/GetFlightDetails",
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 7013
-        }
-      ],
-      "UpstreamPathTemplate": "/gateway/GetFlightDetails",
-      "UpstreamHttpMethod": [  "GET"]
-    },
-    {
+      "UseServiceDiscovery": true,
+      "ServiceName": "BookingManagementService",
       "DownstreamPathTemplate": "/api/BookingManagement/Cancel",
       "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 7013
-        }
-      ],
       "UpstreamPathTemplate": "/gateway/Cancel",
       "UpstreamHttpMethod": [ "PUT" ]
     },
     {
+      "UseServiceDiscovery": true,
+      "ServiceName": "BookingManagementService",
       "DownstreamPathTemplate": "/api/BookingManagement/bookflight",
       "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 7013
-        }
-      ],
       "UpstreamPathTemplate": "/gateway/bookflight",
       "UpstreamHttpMethod": [ "POST" ]
     }
@@ -115,8 +144,11 @@
 
   ],
   "GlobalConfiguration": {
-    "RequestIdKey": "OcRequestId",
-    "AdministrationPath": "./administration"
+    "ServiceDiscoveryProvideqr": {
+      "Host": "localhost",
+      "Port": "8500",
+      "Type": "Consul"
+    }
   }
 
 }  

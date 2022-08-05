@@ -46,13 +46,25 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
             "Ocelot": {
+              "target": "Package",
+              "version": "[18.0.0, )"
+            },
+            "Ocelot.Provider.Consul": {
               "target": "Package",
               "version": "[18.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "Swashbuckle.AspNetCore.Filters": {
+              "target": "Package",
+              "version": "[7.0.3, )"
             }
           },
           "imports": [

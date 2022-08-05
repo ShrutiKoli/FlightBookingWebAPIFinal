@@ -1,10 +1,12 @@
 ﻿using BookingManagementService.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace BookingManagementService.Controllers
 {
+   [Authorize(Roles = "User")]
     [Route("api/[controller]")]
     [ApiController]
     public class BookingManagementController : ControllerBase
@@ -25,19 +27,28 @@ namespace BookingManagementService.Controllers
 
         [HttpGet]
         [Route("GetFlightDetails")]
-        public BookFlight GetFlightDetails(string Pnr)
+        public List<BookFlight> GetFlightDetails(string Pnr)
         {
-            return repository.GetFlightDetails(Pnr);
+             List<BookFlight> flights = new List<BookFlight>();
+            var data = repository.GetFlightDetails(Pnr);
+            if (data != null)
+            {
+                flights.Add(data);
+                return flights;
+            }
+           else
+                return flights;
         }
 
         
 
         [HttpPut]
         [Route("Cancel")]
-        public async Task<ActionResult<string>>CancelBooking(int boookingid )
+        public async Task<ActionResult>CancelBooking(int boookingid )
         {
-                return await repository.CancelBooking(boookingid);
-           
+         var res =await repository.CancelBooking(boookingid);
+
+            return Ok(res);
         }
 
         [HttpPost]
@@ -56,6 +67,23 @@ namespace BookingManagementService.Controllers
 
             await repository.AddUserData(users);
              return Ok();
+        }
+
+
+        [HttpPost]
+        [Route("ApplyDiscount")]
+        public async Task<ActionResult<string>> ApplyDiscount(string discountCode)
+        {
+           return await repository.ApplyDiscount(discountCode);
+
+        }
+
+        [HttpGet]
+        [Route("GetDiscount")]
+        public async Task<ActionResult<string>> GetDiscount()
+        {
+            return await repository.GetDiscount();
+
         }
 
         #region

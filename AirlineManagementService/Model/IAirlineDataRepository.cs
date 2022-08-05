@@ -7,7 +7,8 @@ namespace AirlineManagementService.Model
         List<FlightSearch> SearchFlight(string source, string destination, string date);
         Task<ActionResult<AirlineDetail>> AddAirline(AirlineDetail airlineDetail);
         Task<ActionResult<FlightDetail>> AddFlight(FlightDetail flightDetail);
-        Task<ActionResult<string>> BlockAirline(string irlineName,string airlineCode);
+        Task<ActionResult<string>> BlockAirline(string irlineName,string airlineCode,bool status);
         Task<ActionResult<FlightScheduleDetail>> ScheduleFlight(FlightScheduleDetail flightScheduleDetail);
+        public Task<ActionResult<string>> ProvideDiscount();
     }
 }

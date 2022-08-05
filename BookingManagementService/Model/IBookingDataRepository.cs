@@ -9,5 +9,6 @@ namespace BookingManagementService.Model
         public List<BookFlight> GetHistory(string Email);
         public BookFlight GetFlightDetails(string Pnr);
         public Task<ActionResult<string>> CancelBooking(int id);
+        public Task<ActionResult<string>> ApplyDiscount(string discountCode);
     }
 }

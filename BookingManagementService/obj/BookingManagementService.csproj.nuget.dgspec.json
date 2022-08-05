@@ -46,6 +46,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Consul": {
+              "target": "Package",
+              "version": "[1.6.10.6, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.7, )"
@@ -70,9 +78,17 @@
               "target": "Package",
               "version": "[6.0.7, )"
             },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.2.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.3.2, )"
+            },
+            "Swashbuckle.AspNetCore.Filters": {
+              "target": "Package",
+              "version": "[7.0.3, )"
             }
           },
           "imports": [

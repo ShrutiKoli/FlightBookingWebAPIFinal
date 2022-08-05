@@ -18,7 +18,7 @@ namespace BookingManagementService.Model
         public string? NameOfUser { get; set; }
         public string? EmailId { get; set; }
         public int? NoOfSeats { get; set; }
-        public double? Discount { get; set; }
+        public string? Discount { get; set; }
         public decimal? Cost { get; set; }
         public string? MealOption { get; set; }
         public bool? IsActive { get; set; }
@@ -26,6 +26,12 @@ namespace BookingManagementService.Model
         public DateTime? CreatedOn { get; set; }
         public int? LastUpdatedBy { get; set; }
         public DateTime? LastUpdatedOn { get; set; }
+        public string? AirlineName { get; set; }
+        public string? FlightCode { get; set; }
+        public string? Source { get; set; }
+        public string? Destination { get; set; }
+        public DateTime? FromDate { get; set; }
+        public DateTime? ToDate { get; set; }
 
         public virtual ICollection<UserBookingDetail> UserBookingDetails { get; set; }
     }

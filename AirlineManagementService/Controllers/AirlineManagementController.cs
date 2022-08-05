@@ -1,10 +1,12 @@
 ﻿using AirlineManagementService.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace AirlineManagementService.Controllers
 {
+    [Authorize(Roles ="Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class AirlineManagementController : ControllerBase
@@ -17,15 +19,46 @@ namespace AirlineManagementService.Controllers
             repository = new AirlineDataRepository(context);
         }
 
+  
         // GET: api/<AirlineManagementController>
+
         [HttpGet]
+        [AllowAnonymous]
         [Route("SearchFlight")]
         public List<FlightSearch> SearchFlight(string source, string destination, string date)
         {
             return repository.SearchFlight(source, destination, date);
         }
+        [HttpGet]
+      
+        [Route("getAirlines")]
+        public List<AirlineDetail> GetAirlines()
+        {
+            return repository.GetAirlines();
+        }
+        [HttpGet]
 
-        
+        [Route("getFlights")]
+        public List<FlightData> GetFlights()
+        {
+            return repository.GetFlights();
+        }
+
+        [HttpGet]
+        [Route("getAirlineSchedule")]
+        public List<FlightScheduleData> GetAirlineSchedule()
+        {
+            return repository.GetAirlineSchedule();
+        }
+        [HttpGet]
+
+        [Route("getAirlineByName")]
+        public int GetAirlineByName(string name)
+        {
+            return repository.GetAirlineByName(name);
+        }
+
+
 
         // POST api/<AirlineManagementController>
         [HttpPost]
@@ -72,6 +105,7 @@ namespace AirlineManagementService.Controllers
         [Route("ScheduleFlight")]
         public async Task<IActionResult> ScheduleFlight([FromBody] FlightScheduleDetail flightScheduleDetail)
         {
+            
             FlightScheduleDetail flightSchedule = new FlightScheduleDetail()
             {
                 FlightId= flightScheduleDetail.FlightId,
@@ -98,10 +132,34 @@ namespace AirlineManagementService.Controllers
 
         [HttpPut]
         [Route("BlockAirline")]
-        public async Task<ActionResult<string>> BlockAirline(string airlineName, string airlineCode)
+        public async Task<IActionResult> BlockAirline(string airlineName, string airlineCode, bool status)
         {
-            return await repository.BlockAirline(airlineName, airlineCode);
-         
+            var res=await repository.BlockAirline(airlineName, airlineCode,status);
+
+            return Ok(res);
+
+
+        }
+
+        [HttpPut]
+        [Route("BlockFlight")]
+        public async Task<IActionResult> BlockFlight( string flightcode, bool status)
+        {
+            var res = await repository.BlockFlight(flightcode,status);
+
+            return Ok(res);
+
+
+        }
+
+        
+        [HttpPost]
+        [Route("ProvideDiscount")]
+        [AllowAnonymous]
+        public async Task<ActionResult<string>> ProvideDiscount()
+        {
+            return await repository.ProvideDiscount();
+
         }
         #region 1
         //// GET api/<AirlineManagementController>/5

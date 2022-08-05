@@ -40,6 +40,8 @@ namespace BookingManagementService.Model
 
                 entity.Property(e => e.CreatedOn).HasColumnType("datetime");
 
+                entity.Property(e => e.Discount).HasMaxLength(200);
+
                 entity.Property(e => e.EmailId)
                     .HasMaxLength(200)
                     .HasColumnName("EmailID");
@@ -47,6 +49,8 @@ namespace BookingManagementService.Model
                 entity.Property(e => e.FlightId).HasColumnName("FlightID");
 
                 entity.Property(e => e.FlightSchId).HasColumnName("FlightSchID");
+
+                entity.Property(e => e.FromDate).HasColumnType("datetime");
 
                 entity.Property(e => e.LastUpdatedOn).HasColumnType("datetime");
 
@@ -57,6 +61,8 @@ namespace BookingManagementService.Model
                 entity.Property(e => e.Pnr)
                     .HasMaxLength(50)
                     .HasColumnName("PNR");
+
+                entity.Property(e => e.ToDate).HasColumnType("datetime");
             });
 
             modelBuilder.Entity<UserBookingDetail>(entity =>
